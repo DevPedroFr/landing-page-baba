@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clube da Mamãe - Cuidado profissional para o seu bebê</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +14,8 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>Clube da Mamãe</h1>
+                <!-- INSERIR AQUI: Logo do Clube da Mamãe (versão horizontal preferencial) -->
+                <img src="images/logo.png" alt="Clube da Mamãe" class="logo-img">
             </div>
             <nav class="nav">
                 <a href="#metodo">Como funciona</a>
@@ -28,18 +32,17 @@
                     <h2 class="headline">Cuidado profissional para o seu bebê.<br>Apoio real para você.</h2>
                     <p class="subheadline">O Clube da Mamãe conecta mães no puerpério a babás profissionais preparadas, com método, acompanhamento e acolhimento.</p>
                     <a href="https://chat.whatsapp.com/BjPobk9KiQU3n72BxI7ylk" class="cta-primary" target="_blank">
-                        <span class="icon">💬</span>
                         Quero conhecer a comunidade do Clube da Mamãe
                     </a>
                 </div>
                 <div class="hero-image">
-                    <div class="image-placeholder">
-                        <div class="placeholder-icon">👶</div>
-                        <img src="images/mombaby.jpg">
-                    </div>
+                    <!-- INSERIR AQUI: Imagem acolhedora de mãe e bebê (formato sugerido: 600x700px) -->
+                    <img src="images/mombaby.jpg" alt="Mãe e bebê" class="main-image">
+                    <div class="hero-shape"></div>
                 </div>
             </div>
         </div>
+        <div class="pattern-bg pattern-ondas"></div>
     </section>
 
     <!-- Identificação e Validação -->
@@ -50,6 +53,7 @@
                 <p>O puerpério é intenso, confuso e cheio de decisões difíceis. E tentar dar conta de tudo sozinha costuma pesar ainda mais.</p>
                 <p>Muitas mães chegam até nós exaustas, com medo de errar e sem saber em quem confiar.</p>
                 <div class="highlight-box">
+                    <div class="quote-mark"></div>
                     <p class="emphasis">Precisar de apoio não te faz menos mãe. Te faz consciente.</p>
                 </div>
             </div>
@@ -65,15 +69,29 @@
                 
                 <div class="benefits-grid">
                     <div class="benefit-card">
-                        <div class="benefit-icon">🛡️</div>
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 100 100" width="60" height="60">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="3"/>
+                                <path d="M30 50 L45 65 L70 35" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <h4>O bebê fica mais seguro</h4>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">💝</div>
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 100 100" width="60" height="60">
+                                <path d="M50 30 C30 30 20 40 20 55 C20 70 35 80 50 85 C65 80 80 70 80 55 C80 40 70 30 50 30Z" fill="none" stroke="currentColor" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="8" fill="currentColor"/>
+                            </svg>
+                        </div>
                         <h4>A mãe se sente amparada</h4>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">✨</div>
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 100 100" width="60" height="60">
+                                <path d="M50 20 L55 40 L75 45 L60 60 L63 80 L50 70 L37 80 L40 60 L25 45 L45 40 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+                            </svg>
+                        </div>
                         <h4>As decisões ficam mais claras</h4>
                     </div>
                 </div>
@@ -90,10 +108,9 @@
         <div class="container">
             <div class="fernanda-content">
                 <div class="fernanda-image">
-                    <div class="image-placeholder">
-                        <div class="placeholder-icon">👩‍⚕️</div>
-                        <img src="images/fernanda.png">
-                    </div>
+                    <!-- INSERIR AQUI: Foto profissional e acolhedora da Fernanda (formato sugerido: 500x600px) -->
+                    <img src="images/fernanda.png" alt="Fernanda Miranda" class="main-image">
+                    <div class="fernanda-shape"></div>
                 </div>
                 <div class="fernanda-text slide-up">
                     <h3>Quem é Fernanda Miranda</h3>
@@ -141,6 +158,7 @@
                 </div>
             </div>
         </div>
+        <div class="pattern-bg pattern-rede"></div>
     </section>
 
     <!-- Babá Profissional -->
@@ -153,7 +171,6 @@
                 <p class="emphasis">Porque confiança não nasce do acaso.</p>
                 
                 <a href="https://wa.me/5511975666104" class="cta-secondary" target="_blank">
-                    <span class="icon">📱</span>
                     Quero entender como funciona a assessoria de babás
                 </a>
             </div>
@@ -170,15 +187,15 @@
                     
                     <div class="comunidade-benefits">
                         <div class="benefit-item">
-                            <span class="check">✓</span>
+                            <span class="check"></span>
                             <p>Dicas semanais</p>
                         </div>
                         <div class="benefit-item">
-                            <span class="check">✓</span>
+                            <span class="check"></span>
                             <p>Conteúdos claros sobre sono, mamada, rotina</p>
                         </div>
                         <div class="benefit-item">
-                            <span class="check">✓</span>
+                            <span class="check"></span>
                             <p>Troca com outros profissionais da saúde</p>
                         </div>
                     </div>
@@ -186,15 +203,13 @@
                     <p class="emphasis">Sem julgamento. Sem pressão.</p>
                     
                     <a href="https://chat.whatsapp.com/BjPobk9KiQU3n72BxI7ylk" class="cta-primary" target="_blank">
-                        <span class="icon">💬</span>
                         Entrar para a comunidade do Clube da Mamãe
                     </a>
                 </div>
                 <div class="comunidade-image">
-                    <div class="image-placeholder">
-                        <div class="placeholder-icon">👥</div>
-                        <img src="images/comunidade.jpg">
-                    </div>
+                    <!-- INSERIR AQUI: Imagem representando comunidade/grupo de apoio (formato sugerido: 550x650px) -->
+                    <img src="images/comunidade.jpg" alt="Comunidade de apoio" class="main-image">
+                    <div class="comunidade-shape"></div>
                 </div>
             </div>
         </div>
@@ -226,11 +241,11 @@
                 <p>Se você sente que precisa de ajuda, mas quer entender com calma como funciona, converse com a Fernanda.</p>
                 <p class="emphasis">Aqui, o cuidado começa na escuta.</p>
                 <a href="https://wa.me/5511975666104" class="cta-primary large" target="_blank">
-                    <span class="icon">💬</span>
                     Falar com a Fernanda no WhatsApp
                 </a>
             </div>
         </div>
+        <div class="pattern-bg pattern-ondas"></div>
     </section>
 
     <!-- Footer -->
@@ -238,7 +253,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h4>Clube da Mamãe</h4>
+                    <!-- INSERIR AQUI: Logo do Clube da Mamãe versão clara/branca -->
+                    <img src="images/image.png" alt="Clube da Mamãe" class="footer-logo">
                     <p>Cuidado profissional para o seu bebê.<br>Apoio real para você.</p>
                 </div>
                 <div class="footer-links">
