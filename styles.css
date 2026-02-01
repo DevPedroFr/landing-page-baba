@@ -146,6 +146,7 @@ body {
     position: relative;
     z-index: 2;
     box-shadow: 0 20px 60px rgba(35, 57, 63, 0.15);
+    pointer-events: none;
 }
 
 .hero-shape,
@@ -157,9 +158,10 @@ body {
     border-radius: 20px;
     background: linear-gradient(135deg, var(--rose-terroso) 0%, var(--terracota) 100%);
     opacity: 0.3;
-    z-index: 1;
+    z-index: 0;
     top: 30px;
     left: 30px;
+    pointer-events: none;
 }
 
 /* Pattern Backgrounds */
@@ -446,12 +448,45 @@ section {
 /* Babá Profissional */
 .baba-profissional {
     background-color: var(--branco);
-    text-align: center;
 }
 
-.baba-profissional .content-block {
-    max-width: 700px;
-    margin: 0 auto;
+.baba-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.baba-text {
+    position: relative;
+    z-index: 10;
+}
+
+.baba-image {
+    position: relative;
+}
+
+.baba-image .main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 60px rgba(35, 57, 63, 0.15);
+    pointer-events: none;
+}
+
+.baba-shape {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--rose-terroso) 0%, var(--terracota) 100%);
+    opacity: 0.3;
+    z-index: 0;
+    top: 30px;
+    left: 30px;
+    pointer-events: none;
 }
 
 .baba-profissional .cta-secondary {
@@ -461,6 +496,11 @@ section {
 /* Comunidade */
 .comunidade {
     background-color: var(--bege-organico);
+    position: relative;
+}
+
+.comunidade * {
+    pointer-events: auto;
 }
 
 .comunidade-content {
@@ -468,6 +508,29 @@ section {
     grid-template-columns: 1.3fr 1fr;
     gap: 80px;
     align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.comunidade-text {
+    position: relative;
+    z-index: 10;
+    user-select: text;
+}
+
+.comunidade-text * {
+    user-select: text;
+    pointer-events: auto;
+}
+
+.comunidade-text a {
+    position: relative;
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.comunidade-image {
+    position: relative;
 }
 
 .comunidade-benefits {
@@ -746,7 +809,8 @@ section {
 @media (max-width: 968px) {
     .hero-content,
     .fernanda-content,
-    .comunidade-content {
+    .comunidade-content,
+    .baba-content {
         grid-template-columns: 1fr;
         gap: 50px;
     }
