@@ -120,7 +120,6 @@ body {
     z-index: 2;
 }
 
-/* ADICIONADO: eyebrow — posicionamento da marca logo acima da headline */
 .eyebrow {
     font-size: 13px;
     font-weight: 600;
@@ -148,7 +147,6 @@ body {
     font-weight: 400;
 }
 
-/* ADICIONADO: tagline oficial abaixo do CTA do hero */
 .tagline-hero {
     margin-top: 24px;
     font-size: 14px;
@@ -288,7 +286,6 @@ section {
     background-color: var(--branco);
 }
 
-/* ADICIONADO: label de seção reutilizável para contextualizar conteúdo */
 .section-label {
     font-size: 12px;
     font-weight: 700;
@@ -357,12 +354,7 @@ section {
     line-height: 1.6;
 }
 
-/* =============================================
-   SEÇÃO ATRIBUTOS — nova seção adicionada
-   Materializa os 4 atributos do manual:
-   Seguro, Especialista, Técnico, Acolhedor
-   Âncora (3 primeiros) e Apoio (Acolhedor)
-   ============================================= */
+/* Seção Atributos */
 .atributos {
     background-color: var(--branco);
     padding-top: 80px;
@@ -390,14 +382,12 @@ section {
     overflow: hidden;
 }
 
-/* Âncora cards: destaque maior, representa o diferencial proprietário */
 .atributo-card[data-atributo="ancora"] {
     background-color: var(--branco);
     border-color: var(--rose-claro);
     box-shadow: 0 2px 16px rgba(35, 57, 63, 0.05);
 }
 
-/* Apoio card: tom levemente diferente, representa o que a técnica gera */
 .atributo-card[data-atributo="apoio"] {
     background: linear-gradient(135deg, var(--bege-claro) 0%, var(--rose-claro) 100%);
     border-color: var(--rose-terroso);
@@ -631,9 +621,143 @@ section {
     margin-top: 32px;
 }
 
+/* =============================================
+   SEÇÃO DEPOIMENTOS
+   ============================================= */
+.depoimentos {
+    background-color: var(--bege-claro);
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.depo-track-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.depo-fade-left,
+.depo-fade-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.depo-fade-left {
+    left: 0;
+    background: linear-gradient(to right, var(--bege-claro), transparent);
+}
+
+.depo-fade-right {
+    right: 0;
+    background: linear-gradient(to left, var(--bege-claro), transparent);
+}
+
+.depo-track {
+    display: flex;
+    gap: 32px;
+    animation: scrollCards 28s linear infinite;
+    width: max-content;
+    padding: 0 32px;
+}
+
+.depo-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollCards {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.depo-card {
+    background: var(--branco);
+    border: 1px solid var(--bege-organico);
+    border-radius: 20px;
+    padding: 40px 36px;
+    width: 460px;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: 0 2px 16px rgba(35, 57, 63, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.depo-card:hover {
+    box-shadow: 0 12px 36px rgba(35, 57, 63, 0.1);
+    transform: translateY(-4px);
+}
+
+.depo-card::before {
+    content: '\201C';
+    font-size: 80px;
+    color: var(--terracota);
+    opacity: 0.15;
+    position: absolute;
+    top: 12px;
+    left: 28px;
+    font-family: Georgia, serif;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.depo-stars {
+    color: var(--terracota);
+    font-size: 18px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.depo-text {
+    font-size: 16px;
+    color: var(--marrom);
+    line-height: 1.8;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.depo-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid var(--bege-organico);
+    padding-top: 20px;
+}
+
+.depo-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--terracota), var(--rose-terroso));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--branco);
+    flex-shrink: 0;
+}
+
+.depo-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--verde-profundo);
+    margin-bottom: 2px;
+    margin: 0 0 2px 0;
+}
+
+.depo-info {
+    font-size: 13px;
+    color: var(--marrom-suave);
+    margin: 0;
+}
+
 /* Comunidade */
 .comunidade {
-    background-color: var(--bege-claro);
+    background-color: var(--branco);
     position: relative;
 }
 
@@ -725,7 +849,6 @@ section {
     text-align: center;
 }
 
-/* ADICIONADO: label de seção no curso, diferencia contexto "para profissionais" */
 .curso-label {
     font-size: 12px;
     font-weight: 700;
@@ -782,7 +905,6 @@ section {
     line-height: 1.8;
 }
 
-/* ADICIONADO: tagline no CTA final com destaque especial */
 .cta-content .emphasis {
     font-size: 26px;
     margin-bottom: 56px;
@@ -827,7 +949,6 @@ section {
     color: var(--rose-claro);
 }
 
-/* ADICIONADO: tagline no footer com destaque sutil */
 .footer-tagline {
     font-size: 13px !important;
     font-weight: 600;
@@ -907,7 +1028,6 @@ section {
 
 /* Responsive */
 @media (max-width: 1100px) {
-    /* ADICIONADO: breakpoint para a grid de 4 atributos */
     .atributos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -927,9 +1047,17 @@ section {
         grid-template-columns: 1fr;
     }
 
-    /* ADICIONADO: atributos em coluna única em mobile */
     .atributos-grid {
         grid-template-columns: 1fr;
+    }
+
+    .depo-card {
+        width: 340px;
+    }
+
+    .depo-fade-left,
+    .depo-fade-right {
+        width: 60px;
     }
 
     .hero-text h2.headline {
@@ -1010,6 +1138,11 @@ section {
 
     .atributo-card {
         padding: 36px 24px;
+    }
+
+    .depo-card {
+        width: 300px;
+        padding: 28px 24px;
     }
 
     .key-phrase p {

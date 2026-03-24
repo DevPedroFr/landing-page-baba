@@ -263,3 +263,9 @@ steps.forEach((step, index) => {
     
     countObserver.observe(step);
 });
+
+// Loop infinito dos depoimentos
+const depoTrack = document.getElementById('depo-track');
+if (depoTrack) {
+    depoTrack.innerHTML += depoTrack.innerHTML;
+}
